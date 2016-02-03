@@ -27,7 +27,7 @@ public class LayoutInterceptor extends HandlerInterceptorAdapter {
         modelAndView.getModel().put("genres", genreRepository.findAll());
         modelAndView.getModel().put("movieGenres", movieGenres);
         modelAndView.getModel().put("musicGenres", musicGenres);
-
+        modelAndView.getModel().put("principal", request.getAttribute("principal"));
 
         // メニュー表示用にListを分割
         List<List<Genre>> dividedMovieGenres = new ArrayList<List<Genre>>();

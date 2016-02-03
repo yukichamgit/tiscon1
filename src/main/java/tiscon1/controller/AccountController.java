@@ -102,13 +102,35 @@ public class AccountController {
     }
 
     @RequestMapping("/my/orders")
-    public String showOrders(@ModelAttribute("principal") UserPrincipal principal) {
-        return "customerOrders";
+    public String showOrders(@RequestParam("id") Long customerId,
+                             @ModelAttribute("principal") UserPrincipal principal,
+                             Model model) {
+        if (customerRepository.exists(customerId)) {
+            Customer customer = customerRepository.findOne(customerId);
+            model.addAttribute("customer", customer);
+            AccountForm accountForm = new AccountForm();
+            BeanUtils.copyProperties(customer, accountForm);
+            model.addAttribute("accountForm", accountForm);
+            return "customerOrders";
+        } else {
+            return "error";
+        }
     }
 
     @RequestMapping("/my/wishlist")
-    public String showWishlist(@ModelAttribute("principal") UserPrincipal principal) {
-        return "customerWishlist";
+    public String showWishlist(@RequestParam("id") Long customerId,
+                               @ModelAttribute("principal") UserPrincipal principal,
+                               Model model) {
+        if (customerRepository.exists(customerId)) {
+            Customer customer = customerRepository.findOne(customerId);
+            model.addAttribute("customer", customer);
+            AccountForm accountForm = new AccountForm();
+            BeanUtils.copyProperties(customer, accountForm);
+            model.addAttribute("accountForm", accountForm);
+            return "customerWishlist";
+        } else {
+            return "error";
+        }
     }
 
 }

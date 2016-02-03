@@ -51,10 +51,28 @@
             </div>
             <div class="col-md-6" data-animate="fadeInDown">
                 <ul class="menu">
+                    <#if principal??>
+                    <li class="dropdown yamm-fw">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">${principal.name}さん<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                                <div class="yamm-content">
+                                    <div class="row">
+                                            <div class="col-sm-3">
+                                                <a href="/logout" class="layout-menu-font">Logout</a>
+                                            </div>
+                                    </div>
+                                </div>
+                                <!-- /.yamm-content -->
+                        </ul>
+                    </li>
+                    <#else>
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
+                    </#if>
+
                     <li><a href="/register">Register</a>
                     </li>
+
                     <li><a href="http://www.tis.co.jp/recruit/index.html">Contact</a>
                     </li>
                 </ul>
@@ -99,7 +117,7 @@
         <div id="content">
             <div class="container">
 
-                <div class="col-md-12">
+                <div class="col-md-12 layout-menu-index">
 
                     <ul class="breadcrumb">
                         <li><a href="/">Home</a>

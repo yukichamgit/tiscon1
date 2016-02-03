@@ -28,13 +28,13 @@ _________________________________________________________ -->
 
                         <ul class="nav nav-pills nav-stacked">
                             <li class="active">
-                                <a href="/my/orders"><i class="fa fa-list"></i> My orders</a>
+                                <a href="/my/orders?id=${customer.id}"><i class="fa fa-list"></i> My orders</a>
                             </li>
                             <li>
-                                <a href="/my/wishlist"><i class="fa fa-heart"></i> My wishlist</a>
+                                <a href="/my/wishlist?id=${customer.id}"><i class="fa fa-heart"></i> My wishlist</a>
                             </li>
                             <li>
-                                <a href="/my/account"><i class="fa fa-user"></i> My account</a>
+                                <a href="/my/account?id=${customer.id}"><i class="fa fa-user"></i> My account</a>
                             </li>
                             <li>
                                 <a href="/logout"><i class="fa fa-sign-out"></i> Logout</a>
