@@ -1492,7 +1492,7 @@ SceneManager.initGraphics = function() {
     Graphics.initialize(this._screenWidth, this._screenHeight, type);
     Graphics.boxWidth = this._boxWidth;
     Graphics.boxHeight = this._boxHeight;
-    Graphics.setLoadingImage('img/system/Loading.png');
+    Graphics.setLoadingImage('http://unit8.net/tiscon1/img/system/Loading.png');
     if (Utils.isOptionValid('showfps')) {
         Graphics.showFps();
     }
