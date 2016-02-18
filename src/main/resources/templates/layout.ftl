@@ -69,9 +69,9 @@
                     <#else>
                     <li><a href="#" data-toggle="modal" data-target="#login-modal">Login</a>
                     </li>
-                    </#if>
                     <li><a href="/register">Register</a>
                     </li>
+                    </#if>
                     <li><a href="http://www.tis.co.jp/recruit/index.html">Contact</a>
                     </li>
                 </ul>
