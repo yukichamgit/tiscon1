@@ -1,8 +1,8 @@
 package tiscon1.form;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -10,9 +10,9 @@ import java.io.Serializable;
  */
 @Data
 public class LoginForm implements Serializable {
-    @NotNull
+    @NotEmpty
     private String account;
 
-    @NotNull
+    @NotEmpty
     private String password;
 }
